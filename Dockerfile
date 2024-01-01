@@ -7,5 +7,9 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
+RUN pip install --upgrade pip
+
+RUN pip install -r requirements.txt
+
 # Run app.py when the container launches
 CMD ["python", "./app.py"]
